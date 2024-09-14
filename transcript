@@ -1,0 +1,177 @@
+# Reading C:/DESL/Quartus18/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile W:/ece241/Led_Catcher_game/catcher.do
+do catcher.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:31:09 on Dec 05,2023
+# vlog -reportprogress 300 -timescale 1ns/1ns LedTop.v cube.v uart.v RNG.v draw_gameover.v game_over_ROM.v 
+# -- Compiling module vga_adapter
+# -- Compiling module vga_controller
+# -- Compiling module vga_pll
+# -- Compiling module vga_address_translator
+# -- Compiling module dropping_object
+# -- Compiling module LedTop
+# ** Error: (vlog-13069) LedTop.v(187): near "*": syntax error, unexpected '*'.
+# -- Compiling module decoder
+# -- Compiling module controlPath
+# -- Compiling module dataPath
+# -- Compiling module cube
+# -- Compiling module uart
+# -- Compiling module random_number_generator
+# ** Warning: RNG.v(17): (vlog-2576) [BSOB] - Bit-select into 'shift_register' is out of bounds.
+# ** Warning: RNG.v(17): (vlog-2576) [BSOB] - Bit-select into 'shift_register' is out of bounds.
+# ** Warning: RNG.v(17): (vlog-2697) MSB of part-select into 'shift_register' is out of bounds.
+# ** Warning: RNG.v(18): (vlog-2576) [BSOB] - Bit-select into 'shift_register2' is out of bounds.
+# ** Warning: RNG.v(18): (vlog-2576) [BSOB] - Bit-select into 'shift_register2' is out of bounds.
+# ** Warning: RNG.v(18): (vlog-2697) MSB of part-select into 'shift_register2' is out of bounds.
+# -- Compiling module RNG
+# -- Compiling module data_bit_selector
+# -- Compiling module addr_bit_selector
+# -- Compiling module draw_gameover
+# -- Compiling module game_over_ROM
+# End time: 07:31:14 on Dec 05,2023, Elapsed time: 0:00:05
+# Errors: 1, Warnings: 6
+# ** Error: C:/DESL/Quartus18/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./catcher.do line 2
+# C:/DESL/Quartus18/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -timescale 1ns/1ns LedTop.v cube.v uart.v RNG.v draw_gameover.v game_over_ROM.v"
+do catcher.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:31:52 on Dec 05,2023
+# vlog -reportprogress 300 -timescale 1ns/1ns LedTop.v cube.v uart.v RNG.v draw_gameover.v game_over_ROM.v 
+# -- Compiling module vga_adapter
+# -- Compiling module vga_controller
+# -- Compiling module vga_pll
+# -- Compiling module vga_address_translator
+# -- Compiling module dropping_object
+# -- Compiling module LedTop
+# ** Warning: LedTop.v(378): (vlog-2182) 'start_object_addr' might be read before written in always_comb or always @* block.
+# -- Compiling module decoder
+# -- Compiling module controlPath
+# -- Compiling module dataPath
+# -- Compiling module cube
+# -- Compiling module uart
+# -- Compiling module random_number_generator
+# ** Warning: RNG.v(17): (vlog-2576) [BSOB] - Bit-select into 'shift_register' is out of bounds.
+# ** Warning: RNG.v(17): (vlog-2576) [BSOB] - Bit-select into 'shift_register' is out of bounds.
+# ** Warning: RNG.v(17): (vlog-2697) MSB of part-select into 'shift_register' is out of bounds.
+# ** Warning: RNG.v(18): (vlog-2576) [BSOB] - Bit-select into 'shift_register2' is out of bounds.
+# ** Warning: RNG.v(18): (vlog-2576) [BSOB] - Bit-select into 'shift_register2' is out of bounds.
+# ** Warning: RNG.v(18): (vlog-2697) MSB of part-select into 'shift_register2' is out of bounds.
+# -- Compiling module RNG
+# -- Compiling module data_bit_selector
+# -- Compiling module addr_bit_selector
+# -- Compiling module draw_gameover
+# -- Compiling module game_over_ROM
+# 
+# Top level modules:
+# 	vga_adapter
+# 	LedTop
+# 	random_number_generator
+# End time: 07:31:58 on Dec 05,2023, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 7
+# vsim -L altera_mf_ver -t 1ns LedTop 
+# Start time: 07:31:58 on Dec 05,2023
+# Loading work.LedTop
+# Loading work.uart
+# Loading work.cube
+# Loading altera_mf_ver.altsyncram
+# Loading work.controlPath
+# Loading work.dataPath
+# Loading work.RNG
+# Loading work.data_bit_selector
+# Loading work.addr_bit_selector
+# Loading work.draw_gameover
+# Loading work.game_over_ROM
+# Loading work.dropping_object
+# Loading work.decoder
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) game_over_ROM.v(59): [PCDPC] - Port size (8) does not match connection size (3) for port 'data_a'. The port definition is at: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_mf.v(47596).
+#    Time: 0 ns  Iteration: 0  Instance: /LedTop/gameover/gameover/altsyncram_component File: /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: liujun52  Hostname: RD44  ProcessID: 25512
+#           Attempting to use alternate WLF file "./wlftxisewk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxisewk
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../initial.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ns  Iteration: 0  Instance: /LedTop/my_cube/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../initial.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../initial.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ns  Iteration: 0  Instance: /LedTop/my_cube/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../game_over.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ns  Iteration: 0  Instance: /LedTop/gameover/gameover/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../game_over.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../game_over.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.0std/614/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ns  Iteration: 0  Instance: /LedTop/gameover/gameover/altsyncram_component/m_default/altsyncram_inst
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"

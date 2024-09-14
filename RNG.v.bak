@@ -1,0 +1,84 @@
+module RNG(
+    input clk,        // Clock input
+    input reset,      // Reset input
+    output [2:0] rand1, // First 3-bit random number output
+    output [2:0] rand2  // Second 3-bit random number output
+);
+
+// Internal registers for LFSR
+reg [2:0] lfsr1 = 3'b001; // Initial non-zero value
+reg [2:0] lfsr2 = 3'b010; // Initial non-zero value, different from lfsr1
+
+// Linear Feedback Shift Register (LFSR) logic
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        lfsr1 <= 3'b001; // Reset to initial non-zero value
+        lfsr2 <= 3'b010; // Reset to initial non-zero value
+    end else begin
+        // LFSR feedback for first output
+        lfsr1 <= {lfsr1[1:0], lfsr1[2] ^ lfsr1[0]};
+
+        // LFSR feedback for second output with different tap
+        lfsr2 <= {lfsr2[1:0], lfsr2[2] ^ lfsr2[1]};
+    end
+end
+
+// Assign the outputs
+assign rand1 = lfsr1;
+assign rand2 = lfsr2;
+
+endmodule
+
+
+
+module data_bit_selector (
+  input wire [2:0] rand1,     // 3-bit random number input (0-7)
+  input wire [2:0] rand2,     // 3-bit random number input (0-7)
+  output wire [7:0] result     // 8-bit result output
+);
+
+reg [7:0] result_reg; // 8-bit register to store the special bits
+
+always @(*) begin
+    case (rand2)
+      3'b000: result_reg = 8'b00000001; // Set least significant bit to 1 when rand2 is 000
+      3'b001: result_reg = 8'b00000010; // Set the next bit to 1 when rand2 is 001
+      3'b010: result_reg = 8'b00000100; // Set the next bit to 1 when rand2 is 010
+      3'b011: result_reg = 8'b00001000; // Set the next bit to 1 when rand2 is 011
+      3'b100: result_reg = 8'b00010000; // Set the next bit to 1 when rand2 is 100
+      3'b101: result_reg = 8'b00100000; // Set the next bit to 1 when rand2 is 101
+      3'b110: result_reg = 8'b01000000; // Set the next bit to 1 when rand2 is 110
+      3'b111: result_reg = 8'b10000000; // Set all bits to 1 when rand2 is 111
+    endcase
+
+end
+
+assign result = result_reg; // Connect the output to the result register
+
+endmodule
+
+
+module addr_bit_selector (
+  input wire [2:0] rand1,     // 3-bit random number input (0-7)
+  input wire [2:0] rand2,     // 3-bit random number input (0-7)
+  output wire [5:0] result     // 8-bit result output
+);
+
+reg [5:0] result_reg; // 8-bit register to store the special bits
+
+always @(*) begin
+    case (rand2)
+      3'b000: result_reg = 5'd7; // Set least significant bit to 1 when rand2 is 000
+      3'b001: result_reg = 5'd15; // Set the next bit to 1 when rand2 is 001
+      3'b010: result_reg = 5'd23; // Set the next bit to 1 when rand2 is 010
+      3'b011: result_reg = 5'd31; // Set the next bit to 1 when rand2 is 011
+      3'b100: result_reg = 5'd39; // Set the next bit to 1 when rand2 is 100
+      3'b101: result_reg = 5'd47; // Set the next bit to 1 when rand2 is 101
+      3'b110: result_reg = 5'd55; // Set the next bit to 1 when rand2 is 110
+      3'b111: result_reg = 5'd63; // Set all bits to 1 when rand2 is 111
+    endcase
+end
+
+assign result = result_reg; // Connect the output to the result register
+
+endmodule
